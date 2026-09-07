@@ -1,4 +1,4 @@
-# 🔥 Interfacing Flame Sensor Module with Arduino
+# Interfacing Flame Sensor Module with Arduino
 
 ![Interfacing Flame Sensor Module with Arduino](https://playwithcircuit.com/wp-content/uploads/2025/05/Interfacing-Flame-Sensor-Module-with-Arduino.webp)
 
@@ -11,7 +11,7 @@ In this project, an **Arduino UNO** is used to read the sensor. Two approaches a
 
 A buzzer is used as an audible alarm when a flame is detected.
 
-## 🧰 Hardware Required
+## Hardware Required
 
 | Component           |    Quantity |
 | ------------------- | ----------- |
@@ -33,7 +33,7 @@ The **AO pin** provides an analog signal that can be read by an Arduino analog i
 
 The module also includes power and signal LEDs for visual indication.
 
-## ⚙️ Module Specifications
+## Module Specifications
 
 | Parameter         | Typical Value |
 | ----------------- | ------------- |
@@ -81,7 +81,7 @@ The I2C LCD uses the Arduino UNO's **A4 (SDA)** and **A5 (SCL)** pins, so these 
 
 For the LCD configuration used in this project, the I2C address is **0x27**. Keep the **A0, A1, and A2 address jumpers open** to use this address. If all three jumpers are shorted, the address becomes **0x20**.
 
-## 🎛️ Calibrating the Flame Sensor
+## Calibrating the Flame Sensor
 
 Before using the digital output, adjust the onboard potentiometer so the sensor reliably changes its digital state when a flame is introduced into its detection area.
 
@@ -92,7 +92,7 @@ During calibration, the I2C LCD can display:
 
 The analog mode does not require a specific potentiometer setting because the Arduino reads the sensor's analog value directly.
 
-## 🔔 Analog Output Configuration
+## Analog Output Configuration
 
 For analog operation, use the same wiring as the calibration setup but leave the **DO pin unused**.
 ![Flame Sensor Module Pinout](https://playwithcircuit.com/wp-content/uploads/2025/05/wiring-flame-sensor-with-Arduino-UNO-using-analog-output.webp)
@@ -106,7 +106,7 @@ Add the buzzer:
 
 The Arduino can then monitor the analog value from **A0** and activate the buzzer when the detected IR level reaches the desired threshold.
 
-## 🚨 Digital Output Configuration
+## Digital Output Configuration
 
 For digital operation, use the sensor's **DO pin** and leave the analog output disconnected.
 ![Flame Sensor Module Pinout](https://playwithcircuit.com/wp-content/uploads/2025/05/wiring-flame-sensor-with-Arduino-UNO-using-digital-output.webp)
@@ -121,7 +121,7 @@ For digital operation, use the sensor's **DO pin** and leave the analog output d
 
 The potentiometer on the module determines the threshold at which the digital output changes state.
 
-## 🧪 Testing
+## Testing
 
 After completing the wiring:
 
@@ -132,7 +132,7 @@ After completing the wiring:
 5. Place a flame within the sensor's detection area and verify the buzzer response.
 6. Test under the actual lighting conditions in which the project will be used.
 
-## 📚 Reference
+## Reference
 
 For the complete explanation, wiring diagrams, calibration procedure, LCD setup, and detailed Arduino implementation, see the original tutorial:
 
